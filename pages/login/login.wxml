@@ -1,0 +1,8 @@
+<!--pages/login/login.wxml-->
+<view>
+  <img class="img" src="http://img0.imgtn.bdimg.com/it/u=4073344252,2152896402&fm=27&gp=0.jpg" />
+  <view>
+    <input type='text' placeholder="请输入内容" class="input"/>
+    <input type='text' placeholder="请输入内容" class="input"/>
+  </view>
+</view>
