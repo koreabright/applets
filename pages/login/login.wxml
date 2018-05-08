@@ -1,8 +1,19 @@
 <!--pages/login/login.wxml-->
 <view>
-  <img class="img" src="http://img0.imgtn.bdimg.com/it/u=4073344252,2152896402&fm=27&gp=0.jpg" />
+  <image class="img" src="/imgs/logo.png" />
   <view>
-    <input type='text' placeholder="请输入内容" class="input"/>
-    <input type='text' placeholder="请输入内容" class="input"/>
+    <view class="item">
+      <image src='/imgs/username.png' class="email"></image>
+      <input placeholder-class="placeholder" type='text' placeholder="请输入您的邮箱" class="input"/>
+    </view>
+    <view class="item">
+      <image src='/imgs/password.png' class="pass"></image>
+      <input placeholder-class="placeholder" type='password' placeholder="请输入密码" class="input"/>
+      <!-- <image src='/imgs/closeeye.png' class="close-eye"></image> -->
+      <image src='/imgs/openeye.png' class="open-eye"></image>
+    </view>
+    <view class="btn-area">
+      <button class="btn">登录</button>
+    </view>
   </view>
 </view>
