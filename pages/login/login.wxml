@@ -8,9 +8,9 @@
     </view>
     <view class="item">
       <image src='/imgs/password.png' class="pass"></image>
-      <input class="input" placeholder-class="placeholder" password="true" placeholder="请输入密码" id="password" bindinput="inputContent"/>
-      <image wx:if="{{ switchEye }}" src='/imgs/closeeye.png' class="close-eye"></image>
-      <image wx:if="{{ !switchEye }}" src='/imgs/openeye.png' class="open-eye"></image>
+      <input class="input" placeholder-class="placeholder" password="{{ switchEye }}" placeholder="请输入密码" id="password" bindinput="inputContent"/>
+      <image wx:if="{{ switchEye }}" src='/imgs/closeeye.png' class="eye" bindtap="switchEye"></image>
+      <image wx:if="{{ !switchEye }}" src='/imgs/openeye.png' class="eye" bindtap="switchEye"></image>
     </view>
     <view class="btn-area">
       <button class="btn" disabled="{{ isDisabled }}" bindtap="doLogin">登录</button>

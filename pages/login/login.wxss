@@ -37,21 +37,14 @@
   left: 0;
   top: 26rpx;
 }
-.close-eye {
+.eye {
   display: inline-block;
   width: 36rpx;
   height: 36rpx;
   position: absolute;
   right: 0;
   top: 26rpx;
-}
-.open-eye {
-  display: inline-block;
-  width: 36rpx;
-  height: 36rpx;
-  position: absolute;
-  right: 0;
-  top: 26rpx;
+  z-index: 2;
 }
 .btn-area {
   text-align: center;
