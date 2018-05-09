@@ -4,16 +4,16 @@
   <view>
     <view class="item">
       <image src='/imgs/username.png' class="email"></image>
-      <input placeholder-class="placeholder" type='text' placeholder="请输入您的邮箱" class="input"/>
+      <input class="input" placeholder-class="placeholder" type='text' placeholder="请输入您的邮箱" id="username" bindinput="inputContent"/>
     </view>
     <view class="item">
       <image src='/imgs/password.png' class="pass"></image>
-      <input placeholder-class="placeholder" type='password' placeholder="请输入密码" class="input"/>
-      <!-- <image src='/imgs/closeeye.png' class="close-eye"></image> -->
-      <image src='/imgs/openeye.png' class="open-eye"></image>
+      <input class="input" placeholder-class="placeholder" password="true" placeholder="请输入密码" id="password" bindinput="inputContent"/>
+      <image wx:if="{{ switchEye }}" src='/imgs/closeeye.png' class="close-eye"></image>
+      <image wx:if="{{ !switchEye }}" src='/imgs/openeye.png' class="open-eye"></image>
     </view>
     <view class="btn-area">
-      <button class="btn">登录</button>
+      <button class="btn" disabled="{{ isDisabled }}" bindtap="doLogin">登录</button>
     </view>
   </view>
 </view>
