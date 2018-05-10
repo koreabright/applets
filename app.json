@@ -1,42 +1,41 @@
 {
   "pages":[
     "pages/login/login",
-    "pages/carteam/list",
+    "pages/carteam/list/list",
+    "pages/carteam/detail/detail",
     "pages/lend/list",
     "pages/tools/tools",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor":"#527AFF",
-    "navigationBarTextStyle":"red"
+    "navigationBarBackgroundColor": "#527AFF",
+    "navigationBarTextStyle": "#ffffff",
+    "backgroundColor": "#f5f5f5",
+    "backgroundTextStyle": "light"
   },
   "tabBar": {
+    "color": "#999",
+    "selectedColor": "#527AFF",
+
     "list": [
       {
-        "pagePath": "pages/carteam/list",
+        "pagePath": "pages/carteam/list/list",
         "text": "车队长",
         "iconPath": "imgs/tab1.png",
-        "color": "#999",
-        "selectedIconPath": "imgs/tab1-select.png",
-        "selectedColor": "#FF527AFF"
+        "selectedIconPath": "imgs/tab1-select.png"
       },
       {
         "pagePath": "pages/lend/list",
         "text": "借款",
         "iconPath": "imgs/tab2.png",
-        "color": "#999",
-        "selectedIconPath": "imgs/tab2-select.png",
-        "selectedColor": "#FF527AFF"
+        "selectedIconPath": "imgs/tab2-select.png"
       },
       {
         "pagePath": "pages/tools/tools",
         "text": "工具",
         "iconPath": "imgs/tab3.png",
-        "color": "#999",
-        "selectedIconPath": "imgs/tab3-select.png",
-        "selectedColor": "#FF527AFF"
+        "selectedIconPath": "imgs/tab3-select.png"
       }
     ]
   }

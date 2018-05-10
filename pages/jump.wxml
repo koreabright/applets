@@ -1,0 +1,4 @@
+<text>1. 小程序无法获取dom元素, 通过给标签添加 data-xx="xxx", 然后在事件e里面拿到对应的标识</text>
+<text>2. data-xx="xxx", 属性不能有大写字母</text>
+<text>3. 设置tab字体的颜色, 把字体颜色和选中颜色提出来写, 然后再写路径的list</text>
+<text>4. 页面的背景颜色设置无效, 通过在app.wxss里面直接设置page的样式来搞定</text>

@@ -7,4 +7,13 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
+}
+page{  
+  background-color: #f5f5f5;
+  position: relative;
+  height: 100%; 
 } 
+button[plain] {
+  border: 0;
+  padding: 0;
+}

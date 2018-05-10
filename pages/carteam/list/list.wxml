@@ -1,0 +1,23 @@
+<view>
+  <view class="add-area">
+    <button class="add-btn" plain="true">
+      <image class="add-img" src="/imgs/add-carteam.png"></image>新增车队长
+    </button>
+  </view>
+  <scroll-view class="list-box" scroll-y="true" bindscroll="scrollFn" data-name='a'>
+    <view class="list-item" wx:for="{{ list }}" wx:key="{{ item.id }}">
+      <view class="list-title">
+        <text >{{ item.name }}</text>
+        <view class="mobile" bindtap="toCall" data-mobile="{{ item.mobile }}">{{ item.mobile }}
+          <image class="call-img" src="/imgs/call.png"></image>
+        </view>
+      </view>
+      <view class="list-content" bindtap="gotoDetail" data-itemid="{{ item.id }}">
+        <text class="list-companyname">{{ item.companyName }}</text>
+        <text class="list-address">{{ item.address }}</text>
+        <image class="list-more" src="/imgs/more.png"></image>
+      </view>
+    </view>
+  </scroll-view>
+  <image wx:if="{{ isShow }}" class="to-top" src="/imgs/totop.png" bindtap="gotoTop"></image>
+</view>

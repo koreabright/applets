@@ -73,21 +73,22 @@ Page({
    * 登录
    */
   doLogin () {
-    let check = this.checkData(this.data.params);
-    if (!check) {
-      return;
-    }
-    wx.redirectTo({
-      url: '/pages/carteam/list'
+    // let check = this.checkData(this.data.params);
+    // if (!check) {
+    //   return;
+    // }
+    wx.switchTab({
+      url: '/pages/carteam/list/list'
     })
     // wx.request({
-    //   url: '/api/test',
+    //   url: '127.0.0.1:3000/login/index',
     //   data: this.data.params,
     //   header: {
     //     'content-type': 'application/json' // 默认值
     //   },
     //   success: function (res) {
-    //     console.log(res.data)
+    //     // console.log(res.data)
+    //     console.log('hhhh');
     //   }
     // });
   }

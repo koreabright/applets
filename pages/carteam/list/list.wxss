@@ -1,0 +1,88 @@
+.add-area {
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background: #fff;
+}
+.add-img {
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+  padding-right: 10rpx;
+}
+.add-btn {
+  color: #527AFF;
+  font-size: 28rpx;
+  width: 184rpx;
+  display:inline-block;
+  vertical-align:middle;
+}
+.list-box{
+  position: absolute;
+  height: 100%;
+  top: 100rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.list-item {
+  background: #fff;
+  margin-top: 22rpx;
+  width: 100%;
+  min-height: 89rpx;
+}
+.list-title {
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 32rpx;
+  border: 1px solid #eee;
+  clear: both;
+}
+.mobile {
+  float: right;
+  font-size: 32rpx;
+  color: #527AFF;
+}
+.call-img {
+  width: 48rpx;
+  height: 48rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.list-content {
+  padding: 0 32rpx;
+  font-size: 28rpx;
+  color: #333;
+  padding-bottom: 40rpx;
+  position: relative;
+}
+.list-content text {
+  display: inline-block;
+  max-width: 650rpx;
+}
+.list-companyname {
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.list-address {
+  font-size: 24rpx;
+  color: #999;
+}
+.list-more {
+  display: inline-block;
+  width: 13rpx;
+  height: 24rpx;
+  position: absolute;
+  right: 31rpx;
+  top: 70rpx;
+}
+.to-top {
+  display: inline-block;
+  width: 84rpx;
+  height: 84rpx;
+  position: fixed;
+  right: 24rpx;
+  bottom: 35rpx;
+}
