@@ -1,4 +1,6 @@
 // pages/login/login.js
+const app = getApp();
+const API = require('../../utils/api.js');
 Page({
    /**
    * 页面的初始数据
@@ -77,19 +79,23 @@ Page({
     // if (!check) {
     //   return;
     // }
-    wx.switchTab({
-      url: '/pages/carteam/list/list'
-    })
+    
     // wx.request({
-    //   url: '127.0.0.1:3000/login/index',
+    //   url: app.globalData.host + '/api/login',
     //   data: this.data.params,
+    //   method: 'GET',
     //   header: {
-    //     'content-type': 'application/json' // 默认值
+    //     'content-type': 'application/json'
     //   },
     //   success: function (res) {
-    //     // console.log(res.data)
-    //     console.log('hhhh');
+    //     wx.switchTab({
+    //       url: '/pages/carteam/list/list'
+    //     })
     //   }
     // });
+
+    API.ajax((res) => {
+      console.log(res)
+    });
   }
 })

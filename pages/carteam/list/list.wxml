@@ -1,10 +1,10 @@
 <view>
-  <view class="add-area">
-    <button class="add-btn" plain="true">
-      <image class="add-img" src="/imgs/add-carteam.png"></image>新增车队长
-    </button>
-  </view>
-  <scroll-view class="list-box" scroll-y="true" bindscroll="scrollFn" data-name='a'>
+  <scroll-view class="list-box" scroll-y="true" bindscroll="scrollFn" scroll-top="{{scrollTop}}">
+    <view class="add-area">
+      <button class="add-btn" plain="true">
+        <image class="add-img" src="/imgs/add-carteam.png"></image>新增车队长
+      </button>
+    </view>
     <view class="list-item" wx:for="{{ list }}" wx:key="{{ item.id }}">
       <view class="list-title">
         <text >{{ item.name }}</text>
@@ -18,6 +18,6 @@
         <image class="list-more" src="/imgs/more.png"></image>
       </view>
     </view>
+    <image wx:if="{{ isShow }}" class="to-top" src="/imgs/totop.png" bindtap="gotoTop"></image>
   </scroll-view>
-  <image wx:if="{{ isShow }}" class="to-top" src="/imgs/totop.png" bindtap="gotoTop"></image>
 </view>

@@ -18,14 +18,14 @@
   display:inline-block;
   vertical-align:middle;
 }
-.list-box{
+ .list-box{
   position: absolute;
   height: 100%;
-  top: 100rpx;
+  /* top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-}
+  bottom: 0; */
+} 
 .list-item {
   background: #fff;
   margin-top: 22rpx;

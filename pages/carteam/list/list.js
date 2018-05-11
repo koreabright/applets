@@ -1,55 +1,14 @@
 // pages/carteam/list/list.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    scrollTop: 0,
     isShow: false,
-    list: [
-      {
-        id: 1,
-        name: "张三",
-        mobile: "18600232995",
-        companyName: "北京市四方达物流有限公司",
-        address: "北京市昌平区北七家王麻子路365号院"
-      },
-      {
-        id: 2,
-        name: "李四",
-        mobile: "13200000000",
-        companyName: "北京市四方达物流有限公司",
-        address: "北京市昌平区北七家王麻子路365号院"
-      },
-      {
-        id: 3,
-        name: "张三",
-        mobile: "18600232995",
-        companyName: "北京市四方达物流有限公司",
-        address: "北京市昌平区北七家王麻子路365号院"
-      },
-      {
-        id: 4,
-        name: "李四",
-        mobile: "13200000000",
-        companyName: "北京市四方达物流有限公司",
-        address: "北京市昌平区北七家王麻子路365号院"
-      },
-      {
-        id: 5,
-        name: "张三",
-        mobile: "18600232995",
-        companyName: "北京市四方达物流有限公司",
-        address: "北京市昌平区北七家王麻子路365号院"
-      },
-      {
-        id: 6,
-        name: "李四",
-        mobile: "13200000000",
-        companyName: "北京市四方达物流有限公司",
-        address: "北京市昌平区北七家王麻子路365号院"
-      }
-    ]
+    list: []
   },
 
   /**
@@ -58,9 +17,23 @@ Page({
   onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: '车队长列表'
-    })
+    });
+    this.getList();
   },
 
+  getList () {
+    wx.request({
+      url: app.globalData.host + '/api/preloan/prlcaptains/captainlist',
+      data: {},
+      method: "GET",
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          list: res.data.info.list
+        });
+      }
+    })
+  },
   /**
    * 打电话
    */
@@ -76,13 +49,12 @@ Page({
   gotoDetail (e) {
     console.log(e);
     wx.navigateTo({
-      url: '/pages/carteam/list/detail?id=' + e.target.dataset.itemid
+      url: '/pages/carteam/detail/detail?id=' + e.target.dataset.itemid
     })
   },
 
   scrollFn (e) {
-    console.log(e.detail.scrollTop);
-    if (e.detail.scrollTop > 0) {
+    if (e.detail.scrollTop > 100) {
       this.setData({
         isShow: true
       });
@@ -96,11 +68,9 @@ Page({
    * 回到顶部
    */
   gotoTop (e) {
-    console.log(e);
-    wx.pageScrollTo({
-      scrollTop: 0,
-      duration: 300
-    })
+    this.setData({
+      scrollTop: 0
+    });
   },
 
   /**
