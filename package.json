@@ -1,0 +1,24 @@
+{
+  "name": "applets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "edp webserver",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koreabright/applets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koreabright/applets/issues"
+  },
+  "homepage": "https://github.com/koreabright/applets#readme",
+  "devDependencies": {
+    "edp": "^1.1.2",
+    "edp-webserver": "^1.2.11"
+  }
+}

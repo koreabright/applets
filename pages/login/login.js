@@ -94,8 +94,15 @@ Page({
     //   }
     // });
 
-    API.ajax((res) => {
-      console.log(res)
-    });
+    API.ajax(
+      '/api/login',
+      (res) => {
+        wx.switchTab({
+          url: '/pages/carteam/list/list'
+        })
+      },
+      'GET',
+      this.data.params
+    );
   }
 })
