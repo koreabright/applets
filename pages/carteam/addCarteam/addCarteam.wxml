@@ -1,0 +1,52 @@
+<view>
+  <view class="item">
+    <text class="title">车队类型</text>
+    <view class="btn-area">
+      <button class="radio {{ carteamType == 1 ? 'selected': '' }}" bindtap="default">企业车队</button>
+      <button class="radio {{ carteamType == 2 ? 'selected': '' }}" bindtap="default">个人车队</button>
+    </view>
+  </view>
+  <view class="item">
+    <text class="title">姓名</text>
+    <view class="btn-area">
+      <input placeholder='必填' placeholder-class="placeholder"></input>
+    </view>
+  </view>
+  <view class="item">
+    <text class="title">手机号</text>
+    <view class="btn-area">
+      <input placeholder='必填' placeholder-class="placeholder"></input>
+    </view>
+  </view>
+  <view class="item">
+    <text class="title">身份证号</text>
+    <view class="btn-area">
+      <input placeholder='选填' placeholder-class="placeholder"></input>
+    </view>
+  </view>
+  <view class="item">
+    <text class="title">企业名称</text>
+    <view class="btn-area">
+      <input placeholder='选填' placeholder-class="placeholder"></input>
+    </view>
+  </view>
+  <view class="item">
+    <text class="title">所在地区</text>
+      <view class="btn-area"> 
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{allCities}}">
+          <view class="picker">
+            {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+          </view>
+        </picker>
+     </view>  
+    <view class="section">
+    </view> 
+  </view>
+  <view class="item">
+    <text class="title">详细地址</text>
+    <view class="btn-area">
+      <input placeholder='必填，如道路、门牌号、小区等' placeholder-class="placeholder"></input>
+    </view>
+  </view> 
+  <button class="create-btn">创建</button>
+</view>

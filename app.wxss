@@ -17,3 +17,12 @@ button[plain] {
   border: 0;
   padding: 0;
 }
+button[disabled]:not([type]) {
+  margin-top: 150rpx;
+  color: #fff;
+  opacity: 0.5;
+  background: #527AFF;
+  width: 520rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+}

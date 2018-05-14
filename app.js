@@ -34,7 +34,7 @@ App({
     })
   },
   globalData: {
-    host: 'http://172.17.62.37:8888',
+    host: 'http://172.17.54.241:8008',
     userInfo: null
   }
 });

@@ -20,11 +20,10 @@
 }
  .list-box{
   position: absolute;
-  height: 100%;
-  /* top: 0;
+  top: 0;
   left: 0;
   right: 0;
-  bottom: 0; */
+  bottom: 0;
 } 
 .list-item {
   background: #fff;
@@ -38,6 +37,13 @@
   padding: 0 32rpx;
   border: 1px solid #eee;
   clear: both;
+}
+.name {
+  display: inline-block;
+  width: 150rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .mobile {
   float: right;

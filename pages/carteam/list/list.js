@@ -1,19 +1,16 @@
 // pages/carteam/list/list.js
 const app = getApp();
+const API = require('../../../utils/api.js');
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+  // 页面的初始数据
   data: {
     scrollTop: 0,
     isShow: false,
     list: []
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  // 生命周期函数--监听页面加载
   onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: '车队长列表'
@@ -21,40 +18,42 @@ Page({
     this.getList();
   },
 
+  // 获取车队长列表
   getList () {
-    wx.request({
-      url: app.globalData.host + '/api/preloan/prlcaptains/captainlist',
-      data: {},
-      method: "GET",
-      success: (res) => {
-        console.log(res);
+    API.ajax(
+      '/api/carteam/list',
+      (res) => {
         this.setData({
-          list: res.data.info.list
+          list: res.info.list
         });
-      }
-    })
+      },
+      'GET'
+    );
   },
-  /**
-   * 打电话
-   */
+  // 打电话
   toCall (e) {
     wx.makePhoneCall({
       phoneNumber: e.target.dataset.mobile
     })
   },
 
-  /**
-   * 去详情
-   */
-  gotoDetail (e) {
-    console.log(e);
+  // 新增车队长
+  addCarteam () {
     wx.navigateTo({
-      url: '/pages/carteam/detail/detail?id=' + e.target.dataset.itemid
+      url: '/pages/carteam/addCarteam/addCarteam'
     })
   },
 
+  // 去详情
+  toDetail (e) {
+    wx.navigateTo({
+      url: '/pages/carteam/detail/detail?id=' + e.target.dataset.itemid
+    });
+  },
+
+  // 鼠标滚动
   scrollFn (e) {
-    if (e.detail.scrollTop > 100) {
+    if (e.detail.scrollTop > 50) {
       this.setData({
         isShow: true
       });
@@ -64,40 +63,10 @@ Page({
       });
     }
   },
-  /**
-   * 回到顶部
-   */
+  // 回到顶部
   gotoTop (e) {
     this.setData({
       scrollTop: 0
-    });
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+    })
   }
 })

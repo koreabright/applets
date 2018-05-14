@@ -30,7 +30,7 @@ function mockHandler(map) {
 function mockup() {
   return function (context) {
     var pathname = context.request.pathname;
-    context.request.pathname = '/src/mockup/' + pathname + '.json';
+    context.request.pathname = './mock/mockup' + pathname + '.json';
   }
 }
 
@@ -47,7 +47,7 @@ exports.getLocations = function () {
     {
       location: /^\/api\//,
       handler: [
-        mockHandler(require('./utils/debug.js'))
+        mockHandler(require('./mocks/json/debug'))
       ]
     },
     {

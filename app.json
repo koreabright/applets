@@ -3,6 +3,7 @@
     "pages/login/login",
     "pages/carteam/list/list",
     "pages/carteam/detail/detail",
+    "pages/carteam/addCarteam/addCarteam",
     "pages/lend/list",
     "pages/tools/tools",
     "pages/index/index",

@@ -53,17 +53,17 @@ Page({
    */
   checkData (params) {
     let reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-    if (params.username.length < 10) {
+    if (params.username.length < 2) {
       wx.showToast({
-        title: '邮箱长度大于10',
+        title: '邮箱长度大于2',
         icon: 'none',
         duration: 2000
       });
       return false;
     }
-    if (params.password.length < 6) {
+    if (params.password.length < 2) {
       wx.showToast({
-        title: '密码长度大于6',
+        title: '密码长度大于2',
         icon: 'none',
         duration: 2000
       });
@@ -75,24 +75,10 @@ Page({
    * 登录
    */
   doLogin () {
-    // let check = this.checkData(this.data.params);
-    // if (!check) {
-    //   return;
-    // }
-    
-    // wx.request({
-    //   url: app.globalData.host + '/api/login',
-    //   data: this.data.params,
-    //   method: 'GET',
-    //   header: {
-    //     'content-type': 'application/json'
-    //   },
-    //   success: function (res) {
-    //     wx.switchTab({
-    //       url: '/pages/carteam/list/list'
-    //     })
-    //   }
-    // });
+    let check = this.checkData(this.data.params);
+    if (!check) {
+      return;
+    }
 
     API.ajax(
       '/api/login',
